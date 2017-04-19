@@ -1,64 +1,8 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-<title>Index slides</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<head><meta charset="utf-8" />
+<title>DP-estimation</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="reveal.js/css/reveal.css">
-<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
-
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'reveal.js/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
-
-</script>
-
-<!--[if lt IE 9]>
-<script src="reveal.js/lib/js/html5shiv.js"></script>
-<![endif]-->
-
-<!-- Loading the mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration -->
-
-<!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11770,157 +11714,74 @@ ul.typeahead-list > li > a {
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-.reveal {
-  font-size: 160%;
-  overflow-y: scroll;
+body {
+  overflow: visible;
+  padding: 8px;
 }
-.reveal pre {
-  width: inherit;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+div#notebook {
+  overflow: visible;
+  border-top: none;
 }
-.reveal pre code {
-  padding: 0px;
-}
-.reveal section img {
-  border: 0px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal i {
-  font-style: normal;
-  font-family: FontAwesome;
-  font-size: 2em;
-}
-.reveal .slides {
-  text-align: left;
-}
-.reveal.fade {
-  opacity: 1;
-}
-.reveal .progress {
-  position: static;
-}
-div.input_area {
-  padding: 0.06em;
-}
-div.code_cell {
-  background-color: transparent;
-}
-div.prompt {
-  width: 11ex;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  text-align: right;
-}
-div.output_area pre {
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-}
-div.output_prompt {
-  /* 5px right shift to account for margin in parent container */
-  margin: 5px 5px 0 0;
-}
-div.text_cell.rendered .rendered_html {
-  /* The H1 height seems miscalculated, we are just hidding the scrollbar */
-  overflow-y: hidden;
-}
-a.anchor-link {
-  /* There is still an anchor, we are only hidding it */
-  display: none;
-}
-.rendered_html p {
-  text-align: inherit;
+
+@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-</head>
-
-
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
 <body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
 
-
-<div class="reveal">
-<div class="slides">
-<section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="ScPo-CompEcon-CoursePack"><a href="https://github.com/ScPo-CompEcon/Syllabus">ScPo-CompEcon</a> CoursePack<a class="anchor-link" href="#ScPo-CompEcon-CoursePack">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Content">Content<a class="anchor-link" href="#Content">&#182;</a></h2><p>This website contains the course material for the <a href="https://github.com/ScPo-CompEcon/Syllabus">computational economics course at Sciences Po</a>.</p>
-<p>For the assosciated homeworks, please go to our <a href="https://github.com/ScPo-CompEcon">github organization</a>, which lists all of them. Instructions contained within.</p>
-<p>I recommend you clone this somewhere on your computer (don't install as a julia package). You can do this easily in Github Desktop as in the first homework. Choose a suitable location on your computer. Alternatively, in your terminal, do this:</p>
-<div class="highlight"><pre><span></span>git clone https://github.com/ScPo-CompEcon/CoursePack /whereto/on/your/computer
-</pre></div>
-<p>This way you have all the materials locally and can use the site even if offline.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Course-Materials">Course Materials<a class="anchor-link" href="#Course-Materials">&#182;</a></h2><p>You can look at the material in a variety of formats. All content is given as <code>IJulia</code> notebooks, which you can edit on your computer, and from those notebooks I create <code>html</code> rendered versions, <code>pdf</code>s and html slides. The link below point to the actual website, so in case you are offline, just go to <code>/whereto/on/your/computer</code> and open files from that location. For example, to open the IJulia notebooks, do in julia</p>
-<div class="highlight"><pre><span></span><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;IJulia&quot;</span><span class="p">)</span> <span class="c"># use once to install IJulia</span>
-<span class="k">using</span> <span class="n">IJulia</span>
-<span class="n">notebook</span><span class="p">(</span><span class="n">dir</span><span class="o">=</span><span class="s">&quot;/whereto/on/your/computer/Notebooks&quot;</span><span class="p">)</span>  <span class="c"># that&#39;s the dir from above!</span>
-</pre></div>
-<p>This will open up the Jupyter notebook at the location of your notebooks</p>
-<h3 id="Html-Rendered-Notebooks">Html Rendered Notebooks<a class="anchor-link" href="#Html-Rendered-Notebooks">&#182;</a></h3><p><a href="https://ScPo-CompEcon.github.io/CoursePack/Html/BasicIntroduction">Basic Introduction to Julia</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Html/BasicComputing">Basic Introduction to Computing</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Html/integration">Numerical Integration</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Html/PlotsJL">Plots.jl</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Html/funcapprox">Function Approximation</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Html/optimization">Unconstrained Optimization</a></p>
-<h3 id="Slides">Slides<a class="anchor-link" href="#Slides">&#182;</a></h3><p><a href="https://ScPo-CompEcon.github.io/CoursePack/Slides/BasicIntroduction">Basic Introduction to Julia</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Slides/BasicComputing">Basic Introduction to Computing</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Slides/PlotsJL">Plots.jl</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Slides/integration">Numerical Integration</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Slides/funcapprox">Function Approximation</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Slides/optimization">Unconstrained Optimization</a></p>
-<h3 id="Pdf-(does-not-contain-plots!)">Pdf (does not contain plots!)<a class="anchor-link" href="#Pdf-(does-not-contain-plots!)">&#182;</a></h3><p><a href="https://ScPo-CompEcon.github.io/CoursePack/Pdfs/BasicIntroduction.pdf">Basic Introduction to Julia</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Pdfs/BasicComputing.pdf">Basic Introduction to Computing</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Pdfs/PlotsJL.pdf">Plots.jl</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Pdfs/integration.pdf">Numerical Integration</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Pdfs/funcapprox.pdf">Function Approximation</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Pdfs/optimization.pdf">Unconstrained Optimization</a></p>
-<h2 id="Required-Packages">Required Packages<a class="anchor-link" href="#Required-Packages">&#182;</a></h2><p>Please have all of those installed. This list will be updated!</p>
-<ul>
-<li><a href="https://github.com/JuliaPlots/Plots.jl">Plots.jl</a></li>
-<li><a href="https://github.com/JuliaPy/PyPlot.jl">PyPlot.jl</a></li>
-<li><a href="http://spencerlyon.com/PlotlyJS.jl/">PlotlyJS.jl</a></li>
-<li><a href="https://github.com/ScPo-CompEcon/ScPoExample.jl">ScPoExample.jl</a></li>
-<li><a href="https://github.com/Keno/Gallium.jl">Gallium.jl</a></li>
-<li><a href="https://github.com/kmsquire/Logging.jl">Logging.jl</a></li>
-<li><a href="https://dataframesjl.readthedocs.io">DataFrames.jl</a></li>
-<li><a href="https://github.com/JuliaStats/DataFramesMeta.jl">DataFramesMeta.jl</a></li>
-<li><a href="https://github.com/davidanthoff/Query.jl">Queries.jl</a></li>
-<li><a href="https://github.com/JuliaDiff/ForwardDiff.jl">ForwardDiff.jl</a></li>
-<li><a href="https://github.com/ajt60gaibb/FastGaussQuadrature.jl">FastGaussQuadrature.jl</a></li>
-<li><a href="https://github.com/stevengj/Sobol.jl">Sobol.jl</a></li>
-<li><a href="https://github.com/JuliaApproximation/ApproxFun.jl">ApproxFun.jl</a></li>
-<li><a href="https://github.com/JuliaMath/Interpolations.jl">Interpolations.jl</a></li>
-<li><a href="https://github.com/floswald/ApproXD.jl">ApproXD.jl</a></li>
-<li><a href="https://github.com/JuliaNLSolvers/Optim.jl">Optim.jl</a></li>
+<h1 id="Estimation-of-Dynamic-Programming-Models">Estimation of Dynamic Programming Models<a class="anchor-link" href="#Estimation-of-Dynamic-Programming-Models">&#182;</a></h1><ul>
+<li>Now that we know how to solve them, how do we estimate DP models?</li>
+<li>Examples:<ul>
+<li>Rust (1985) &lt;cite data-cite=rust-bus&gt;&lt;/cite&gt;</li>
+<li>Berry, Levinsohn and Pakes (1995) &lt;cite data-cite=BLP&gt;&lt;/cite&gt;</li>
+</ul>
+</li>
+<li>There are many different methods. We will introduce just a few. Look at the survey by Aguirregabiria and Mira &lt;cite data-cite=Aguirre&gt;&lt;/cite&gt; for more details.</li>
 </ul>
 
 </div>
@@ -11931,79 +11792,21 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-build-this">How to build this<a class="anchor-link" href="#How-to-build-this">&#182;</a></h2><p>You should only worry about this section if you want to rebuild the site yourself.</p>
-<h4 id="Requirements">Requirements<a class="anchor-link" href="#Requirements">&#182;</a></h4><div class="highlight"><pre><span></span><span class="c1">#python</span>
-<span class="c1">#latex</span>
-<span class="c1">#ruby</span>
-pip install jupyter
-pip install pandoc
-</pre></div>
-<h4 id="Building">Building<a class="anchor-link" href="#Building">&#182;</a></h4><p>in the root of this repo do</p>
-<div class="highlight"><pre><span></span>rake <span class="c1"># builds all</span>
-rake html <span class="c1"># builds only html</span>
-rake slides <span class="c1"># builds slides</span>
-rake offline <span class="c1"># builds offline slides; mathjax doesn&#39;t work properly offline.</span>
-</pre></div>
+<h2 id="Rust-(1985):-Harold-Zurcher's-Bus-Engine-Replacement-Problem">Rust (1985): Harold Zurcher's Bus Engine Replacement Problem<a class="anchor-link" href="#Rust-(1985):-Harold-Zurcher's-Bus-Engine-Replacement-Problem">&#182;</a></h2><ul>
+<li>Harold Zurcher is the manager of the Wisconsin bus operations.</li>
+<li>He decides on whether a bus needs to undergo an engine replacement or only routine maintainance at a monthly checkup.</li>
+<li>Econometrician observes mileage since last replacement and whether replacement takes place.</li>
+<li>We don't know the cost of replacement though.</li>
+</ul>
 
 </div>
 </div>
-</div></section></section>
 </div>
-</div>
-
-<script>
-
-require(
-    {
-      // it makes sense to wait a little bit when you are loading
-      // reveal from a cdn in a slow connection environment
-      waitSeconds: 15
-    },
-    [
-      "reveal.js/lib/js/head.min.js",
-      "reveal.js/js/reveal.js"
-    ],
-
-    function(head, Reveal){
-
-        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
-
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
-                { src: "reveal.js/lib/js/classList.js",
-                  condition: function() { return !document.body.classList; } },
-                { src: "reveal.js/plugin/notes/notes.js",
-                  async: true,
-                  condition: function() { return !!document.body.classList; } }
-            ]
-        });
-
-        var update = function(event){
-          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
-            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
-          }
-        };
-
-        Reveal.addEventListener('slidechanged', update);
-
-        var update_scroll = function(event){
-          $(".reveal").scrollTop(0);
-        };
-
-        Reveal.addEventListener('slidechanged', update_scroll);
-
-    }
-);
-</script>
-
+    </div>
+  </div>
 </body>
+
+ 
 
 
 </html>

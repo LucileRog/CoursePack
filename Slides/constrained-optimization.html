@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>Index slides</title>
+<title>constrained-optimization slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11855,21 +11855,8 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="ScPo-CompEcon-CoursePack"><a href="https://github.com/ScPo-CompEcon/Syllabus">ScPo-CompEcon</a> CoursePack<a class="anchor-link" href="#ScPo-CompEcon-CoursePack">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Content">Content<a class="anchor-link" href="#Content">&#182;</a></h2><p>This website contains the course material for the <a href="https://github.com/ScPo-CompEcon/Syllabus">computational economics course at Sciences Po</a>.</p>
-<p>For the assosciated homeworks, please go to our <a href="https://github.com/ScPo-CompEcon">github organization</a>, which lists all of them. Instructions contained within.</p>
-<p>I recommend you clone this somewhere on your computer (don't install as a julia package). You can do this easily in Github Desktop as in the first homework. Choose a suitable location on your computer. Alternatively, in your terminal, do this:</p>
-<div class="highlight"><pre><span></span>git clone https://github.com/ScPo-CompEcon/CoursePack /whereto/on/your/computer
-</pre></div>
-<p>This way you have all the materials locally and can use the site even if offline.</p>
+<h1 id="Computational-Economics:-Constrained-Optimization">Computational Economics: Constrained Optimization<a class="anchor-link" href="#Computational-Economics:-Constrained-Optimization">&#182;</a></h1><p>Florian Oswald
+Sciences Po, 2017</p>
 
 </div>
 </div>
@@ -11879,74 +11866,761 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Course-Materials">Course Materials<a class="anchor-link" href="#Course-Materials">&#182;</a></h2><p>You can look at the material in a variety of formats. All content is given as <code>IJulia</code> notebooks, which you can edit on your computer, and from those notebooks I create <code>html</code> rendered versions, <code>pdf</code>s and html slides. The link below point to the actual website, so in case you are offline, just go to <code>/whereto/on/your/computer</code> and open files from that location. For example, to open the IJulia notebooks, do in julia</p>
-<div class="highlight"><pre><span></span><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;IJulia&quot;</span><span class="p">)</span> <span class="c"># use once to install IJulia</span>
-<span class="k">using</span> <span class="n">IJulia</span>
-<span class="n">notebook</span><span class="p">(</span><span class="n">dir</span><span class="o">=</span><span class="s">&quot;/whereto/on/your/computer/Notebooks&quot;</span><span class="p">)</span>  <span class="c"># that&#39;s the dir from above!</span>
-</pre></div>
-<p>This will open up the Jupyter notebook at the location of your notebooks</p>
-<h3 id="Html-Rendered-Notebooks">Html Rendered Notebooks<a class="anchor-link" href="#Html-Rendered-Notebooks">&#182;</a></h3><p><a href="https://ScPo-CompEcon.github.io/CoursePack/Html/BasicIntroduction">Basic Introduction to Julia</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Html/BasicComputing">Basic Introduction to Computing</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Html/integration">Numerical Integration</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Html/PlotsJL">Plots.jl</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Html/funcapprox">Function Approximation</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Html/optimization">Unconstrained Optimization</a></p>
-<h3 id="Slides">Slides<a class="anchor-link" href="#Slides">&#182;</a></h3><p><a href="https://ScPo-CompEcon.github.io/CoursePack/Slides/BasicIntroduction">Basic Introduction to Julia</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Slides/BasicComputing">Basic Introduction to Computing</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Slides/PlotsJL">Plots.jl</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Slides/integration">Numerical Integration</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Slides/funcapprox">Function Approximation</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Slides/optimization">Unconstrained Optimization</a></p>
-<h3 id="Pdf-(does-not-contain-plots!)">Pdf (does not contain plots!)<a class="anchor-link" href="#Pdf-(does-not-contain-plots!)">&#182;</a></h3><p><a href="https://ScPo-CompEcon.github.io/CoursePack/Pdfs/BasicIntroduction.pdf">Basic Introduction to Julia</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Pdfs/BasicComputing.pdf">Basic Introduction to Computing</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Pdfs/PlotsJL.pdf">Plots.jl</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Pdfs/integration.pdf">Numerical Integration</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Pdfs/funcapprox.pdf">Function Approximation</a><br>
-<a href="https://ScPo-CompEcon.github.io/CoursePack/Pdfs/optimization.pdf">Unconstrained Optimization</a></p>
-<h2 id="Required-Packages">Required Packages<a class="anchor-link" href="#Required-Packages">&#182;</a></h2><p>Please have all of those installed. This list will be updated!</p>
-<ul>
-<li><a href="https://github.com/JuliaPlots/Plots.jl">Plots.jl</a></li>
-<li><a href="https://github.com/JuliaPy/PyPlot.jl">PyPlot.jl</a></li>
-<li><a href="http://spencerlyon.com/PlotlyJS.jl/">PlotlyJS.jl</a></li>
-<li><a href="https://github.com/ScPo-CompEcon/ScPoExample.jl">ScPoExample.jl</a></li>
-<li><a href="https://github.com/Keno/Gallium.jl">Gallium.jl</a></li>
-<li><a href="https://github.com/kmsquire/Logging.jl">Logging.jl</a></li>
-<li><a href="https://dataframesjl.readthedocs.io">DataFrames.jl</a></li>
-<li><a href="https://github.com/JuliaStats/DataFramesMeta.jl">DataFramesMeta.jl</a></li>
-<li><a href="https://github.com/davidanthoff/Query.jl">Queries.jl</a></li>
-<li><a href="https://github.com/JuliaDiff/ForwardDiff.jl">ForwardDiff.jl</a></li>
-<li><a href="https://github.com/ajt60gaibb/FastGaussQuadrature.jl">FastGaussQuadrature.jl</a></li>
-<li><a href="https://github.com/stevengj/Sobol.jl">Sobol.jl</a></li>
-<li><a href="https://github.com/JuliaApproximation/ApproxFun.jl">ApproxFun.jl</a></li>
-<li><a href="https://github.com/JuliaMath/Interpolations.jl">Interpolations.jl</a></li>
-<li><a href="https://github.com/floswald/ApproXD.jl">ApproXD.jl</a></li>
-<li><a href="https://github.com/JuliaNLSolvers/Optim.jl">Optim.jl</a></li>
+<h2 id="Constrained-Optimisation">Constrained Optimisation<a class="anchor-link" href="#Constrained-Optimisation">&#182;</a></h2><ul>
+<li>Recall our generic definition of an optimization problem:</li>
+</ul>
+$$ 
+\min_{x\in\mathbb{R}^n} f(x)  \text{ s.t. }\begin{array}{cc} c_i(x) = 0, & i\in E \\
+                                                              c_i(x) \geq 0, & i\in I \end{array}
+$$<ul>
+<li>E is the set of <em>equality constraints</em> and I is the set of <em>inequality constraints</em>.</li>
+<li><strong>Defintion: The Feasible Set</strong>: Let $\Omega$ be the set of points $x$ that satisfy the constraints, i.e.
+  $$ \Omega = {x|c_i(x)=0,i\in E; c_i(x)\geq 0, i\in I} $$</li>
+<li>Then, a different way of writign our problem is
+  $$ \min_{x\in \Omega} f(x)  $$</li>
+<li>A vector $x^*$ is a <em>local solution</em> to this problem if $x^* \in \Omega$ and there is a neighborhood $\mathcal{N}$ s.t. </li>
+</ul>
+$$f(x)\geq f(x^*),\forall x\in \mathcal{N} \cap \Omega$$<ul>
+<li><strong>Definition: The Active Set</strong>: Active set $\mathcal{A}(x)$ at any feasible $x$ consists of the equality constraint indices from E together with the indices of the inequality constraints for $i$ for which $c_i(x) = 0$; that is,</li>
+</ul>
+$$ \mathcal{A}(x) = E \cup {i\in I|c_i(x) = 0} $$<ul>
+<li>At a feasible point $x$, the inequality constraint $i \in I$ is said to be <em>active</em> if $c_i(x)=0$, and <em>inactive</em> if $c_i(x)>0$</li>
 </ul>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-build-this">How to build this<a class="anchor-link" href="#How-to-build-this">&#182;</a></h2><p>You should only worry about this section if you want to rebuild the site yourself.</p>
-<h4 id="Requirements">Requirements<a class="anchor-link" href="#Requirements">&#182;</a></h4><div class="highlight"><pre><span></span><span class="c1">#python</span>
-<span class="c1">#latex</span>
-<span class="c1">#ruby</span>
-pip install jupyter
-pip install pandoc
-</pre></div>
-<h4 id="Building">Building<a class="anchor-link" href="#Building">&#182;</a></h4><p>in the root of this repo do</p>
-<div class="highlight"><pre><span></span>rake <span class="c1"># builds all</span>
-rake html <span class="c1"># builds only html</span>
-rake slides <span class="c1"># builds slides</span>
-rake offline <span class="c1"># builds offline slides; mathjax doesn&#39;t work properly offline.</span>
+<h2 id="Nonlinear-Constraints">Nonlinear Constraints<a class="anchor-link" href="#Nonlinear-Constraints">&#182;</a></h2><ul>
+<li>Consider the following problem</li>
+</ul>
+$$ 
+\min_{x \in \mathbb{R}^2} \sqrt{x_2} \text{ subject to }\begin{array}{c} \\
+ x_2 \geq 0 \\
+ x_2 \geq (a_1 x_1 + b_1)^3 \\
+x_2 \geq (a_2 x_1 + b_2)^3 
+\end{array}
+$$<ul>
+<li>This configuration of constraints leads to the following feasible region for parameters $a_1=2,b_1=0,a_2=-1,b_2=1$.
+<img src="../assets/figs/NLopt-example-constraints.png" alt=""></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example:-1-equality-constraint">Example: 1 equality constraint<a class="anchor-link" href="#Example:-1-equality-constraint">&#182;</a></h2><ul>
+<li>consider 
+  $$ \min x_1 + x_2  \quad s.t. \quad x_1^2 + x_2^2 - 2 = 0 $$</li>
+<li>constraint is a circle with radius $\sqrt{2}$ centered at 0. The solution must lie <em>on</em> that circle.</li>
+<li>Solution: $(-1,-1)$. Consider any other point on circle, like $(\sqrt{2},0)$.</li>
+</ul>
+<p><img src="../assets/figs-restricted/constrained-example.png" alt="Figure 12.3 in [@nocedal-wright]&lt;cite data-cite=nocedalwright&gt;&lt;/cite&gt;"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example:-1-inequality-constraint">Example: 1 inequality constraint<a class="anchor-link" href="#Example:-1-inequality-constraint">&#182;</a></h2><ul>
+<li>Let's modify this example to
+  $$ \min x_1 + x_2  \text{   such that   } 2- x_1^2 - x_2^2 \geq 0 $$</li>
+<li>constraint is the region inside a circle with radius $\sqrt{2}$ centered at 0. The solution must lie <em>on or inside</em> that circle.</li>
+<li>Solution: $(-1,-1)$. Consider any other point on circle, like $(\sqrt{2},0)$.</li>
+<li>Two cases: <ol>
+<li>$x$ lies strictly inside the circle, and $c_1(x) > 0$</li>
+<li>$x$ lies strictly on the circle, and $c_1(x) = 0$</li>
+</ol>
+</li>
+<li>Complementarity condition.</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Some-Methods">Some Methods<a class="anchor-link" href="#Some-Methods">&#182;</a></h2><ul>
+<li>Penalty Function and Augmented Lagrangian Methods</li>
+<li>Sequential Quadratic Method</li>
+<li>Interior Point Method</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Constrained-Optimisation-with-NLopt.jl">Constrained Optimisation with <a href="https://github.com/JuliaOpt/NLopt.jl"><code>NLopt.jl</code></a><a class="anchor-link" href="#Constrained-Optimisation-with-NLopt.jl">&#182;</a></h2><ul>
+<li>We need to specify one function for each objective and constraint.</li>
+<li>Both of those functions need to compute the function value (i.e. objective or constraint) <em>and</em> it's respective gradient. </li>
+<li>Notice that we can disregard $x_2\geq0$ here.</li>
+<li><code>NLopt</code> expects contraints <strong>always</strong> to be formulated in the format 
+  $$ g(x) \leq 0 $$
+   where $g$ is your constraint function</li>
+<li>The constraint function is formulated for each constraint at $x$. it returns a number (the value of the constraint at $x$), and it fills out the gradient vector, which is the partial derivative of the current constraint wrt $x$.</li>
+<li>There is also the option to have vector valued constraints, see the documentation.</li>
+<li>We set this up as follows:</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="k">function</span><span class="nf"> myfunc</span><span class="p">(</span><span class="n">x</span><span class="p">::</span><span class="n">Vector</span><span class="p">,</span> <span class="n">grad</span><span class="p">::</span><span class="n">Vector</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">length</span><span class="p">(</span><span class="n">grad</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="n">grad</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">grad</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">end</span>
+    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">end</span>
+
+<span class="k">function</span><span class="nf"> constraint</span><span class="p">(</span><span class="n">x</span><span class="p">::</span><span class="n">Vector</span><span class="p">,</span> <span class="n">grad</span><span class="p">::</span><span class="n">Vector</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">length</span><span class="p">(</span><span class="n">grad</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    	<span class="c"># modifies grad in place</span>
+        <span class="n">grad</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
+        <span class="n">grad</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">end</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span><span class="o">^</span><span class="mi">3</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">end</span>
+<span class="k">using</span> <span class="n">NLopt</span>
+<span class="c"># define an Opt object: which algorithm, how many dims of choice</span>
+<span class="n">opt</span> <span class="o">=</span> <span class="n">Opt</span><span class="p">(:</span><span class="n">LD_MMA</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c"># set bounds and tolerance</span>
+<span class="n">lower_bounds!</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span> <span class="mf">0.</span><span class="p">])</span>
+<span class="n">xtol_rel!</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span><span class="mf">1e-4</span><span class="p">)</span>
+
+<span class="c"># define objective function</span>
+<span class="n">min_objective!</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="n">myfunc</span><span class="p">)</span>
+<span class="c"># define constraints</span>
+<span class="c"># notice the anonymous function</span>
+<span class="n">inequality_constraint!</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">constraint</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="mf">1e-8</span><span class="p">)</span>
+<span class="n">inequality_constraint!</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">constraint</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="mf">1e-8</span><span class="p">)</span>
+
+<span class="c"># call optimize</span>
+<span class="p">(</span><span class="n">minf</span><span class="p">,</span><span class="n">minx</span><span class="p">,</span><span class="n">ret</span><span class="p">)</span> <span class="o">=</span> <span class="n">optimize</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.234</span><span class="p">,</span> <span class="mf">5.678</span><span class="p">])</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(0.5443310477213124,[0.333333,0.296296],:XTOL_REACHED)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="NLopt:-Rosenbrock">NLopt: Rosenbrock<a class="anchor-link" href="#NLopt:-Rosenbrock">&#182;</a></h2><ul>
+<li>Let's tackle the rosenbrock example again.</li>
+<li>To make it more interesting, let's add an inequality constraint.
+  $$ \min_{x\in \mathbb{R}^2} (1-x_1)^2  + 100(x_2-x_1^2)^2  \text{  subject to  } 0.8 - x_1^2 -x_2^2 \geq 0 $$</li>
+<li>in <code>NLopt</code> format, the constraint is $x_1 + x_2 - 0.8 \leq 0$</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="k">function</span><span class="nf"> rosenbrock</span><span class="p">(</span><span class="n">x</span><span class="p">::</span><span class="n">Vector</span><span class="p">,</span><span class="n">grad</span><span class="p">::</span><span class="n">Vector</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">length</span><span class="p">(</span><span class="n">grad</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+	    <span class="n">grad</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.0</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mf">400.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+	    <span class="n">grad</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">200.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">100.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
+<span class="k">end</span>
+<span class="k">function</span><span class="nf"> r_constraint</span><span class="p">(</span><span class="n">x</span><span class="p">::</span><span class="n">Vector</span><span class="p">,</span> <span class="n">grad</span><span class="p">::</span><span class="n">Vector</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">length</span><span class="p">(</span><span class="n">grad</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+	<span class="n">grad</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+	<span class="n">grad</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+	<span class="k">end</span>
+	<span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.8</span>
+<span class="k">end</span>
+<span class="n">opt</span> <span class="o">=</span> <span class="n">Opt</span><span class="p">(:</span><span class="n">LD_MMA</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">lower_bounds!</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">])</span>
+<span class="n">min_objective!</span><span class="p">(</span><span class="n">opt</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">rosenbrock</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">))</span>
+<span class="n">inequality_constraint!</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">r_constraint</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">))</span>
+<span class="n">ftol_rel!</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span><span class="mf">1e-9</span><span class="p">)</span>
+<span class="p">(</span><span class="n">minf</span><span class="p">,</span><span class="n">minx</span><span class="p">,</span><span class="n">ret</span><span class="p">)</span> <span class="o">=</span> <span class="n">optimize</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[2]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(0.07588358473630112,[0.724702,0.524221],:FTOL_REACHED)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="JuMP.jl">JuMP.jl<a class="anchor-link" href="#JuMP.jl">&#182;</a></h2><ul>
+<li>Introduce <a href="https://github.com/JuliaOpt/JuMP.jl"><code>JuMP.jl</code></a></li>
+<li>JuMP is a mathematical programming interface for Julia. It is like AMPL, but for free and with a decent programming language.</li>
+<li>The main highlights are:<ul>
+<li>It uses automatic differentiation to compute derivatives from your expression.</li>
+<li>It supplies this information, as well as the sparsity structure of the Hessian to your preferred solver.</li>
+<li>It decouples your problem completely from the type of solver you are using. This is great, since you don't have to worry about different solvers having different interfaces.</li>
+<li>In order to achieve this, <code>JuMP</code> uses <a href="https://github.com/JuliaOpt/MathProgBase.jl"><code>MathProgBase.jl</code></a>, which converts your problem formulation into a standard representation of an optimization problem.</li>
+</ul>
+</li>
+<li>Let's look at the readme</li>
+<li>The technical citation is Lubin et al &lt;cite data-cite=JuMP&gt;&lt;/cite&gt;</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="JuMP:-Quick-start-guide">JuMP: Quick start guide<a class="anchor-link" href="#JuMP:-Quick-start-guide">&#182;</a></h2><ul>
+<li>this is form the <a href="http://www.juliaopt.org/JuMP.jl/0.16/quickstart.html">quick start guide</a></li>
+<li>please check the docs, they are excellent.</li>
+</ul>
+<h3 id="Step-1:-create-a-model">Step 1: create a model<a class="anchor-link" href="#Step-1:-create-a-model">&#182;</a></h3><ul>
+<li>A model collects variables, objective function and constraints.</li>
+<li>it defines a solver to be used.</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Clp</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="n">ClpSolver</span><span class="p">())</span>  <span class="c"># provide a solver</span>
+
+<span class="c"># Define variables</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">x</span> <span class="p">)</span>              <span class="c"># No bounds</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">lb</span> <span class="p">)</span>        <span class="c"># Lower bound only (note: &#39;lb &lt;= x&#39; is not valid)</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">ub</span> <span class="p">)</span>        <span class="c"># Upper bound only</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">lb</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">ub</span> <span class="p">)</span>  <span class="c"># Lower and upper bounds</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="c"># we can create arrays of a variable</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">M</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">N</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">)</span>
+
+<span class="c"># or put them in a block</span>
+<span class="p">@</span><span class="n">variables</span> <span class="n">m</span> <span class="k">begin</span>
+    <span class="n">x</span>
+    <span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+    <span class="n">Z</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">],</span> <span class="n">Bin</span>
+    <span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="n">SDP</span>
+    <span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="p">(</span><span class="n">lowerbound</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">2</span><span class="n">i</span><span class="p">,</span> <span class="n">upperbound</span> <span class="o">=</span> <span class="mi">3</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="n">start</span> <span class="o">=</span> <span class="n">j</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="c"># Equivalent to:</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Z</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">],</span> <span class="n">Bin</span><span class="p">)</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="n">SDP</span><span class="p">)</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="n">lowerbound</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">2</span><span class="n">i</span><span class="p">,</span> <span class="n">upperbound</span> <span class="o">=</span> <span class="mi">3</span><span class="n">i</span><span class="p">)</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">start</span> <span class="o">=</span> <span class="n">j</span><span class="p">)</span>
+
+<span class="c"># bounds can depend on indices</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">i</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Objective-and-Constraints">Objective and Constraints<a class="anchor-link" href="#Objective-and-Constraints">&#182;</a></h2><ul>
+<li>We can easily add objective and constraint functions:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="p">@</span><span class="n">constraint</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>  <span class="c"># Other options: == and &gt;=</span>
+<span class="p">@</span><span class="n">constraint</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">numLocation</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">@</span><span class="n">objective</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Max</span><span class="p">,</span> <span class="mi">5</span><span class="n">x</span> <span class="o">+</span> <span class="mi">22</span><span class="n">y</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="c"># or Min</span>
+</pre></div>
+<ul>
+<li>This is fully integrated with Julia. you can use the <code>generator</code> syntax for sums:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="p">@</span><span class="n">objective</span><span class="p">(</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="nb">pi</span> <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="n">I1</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">I2</span> <span class="k">if</span> <span class="n">i</span><span class="o">+</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">some_val</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c">## Simple example</span>
+<span class="k">using</span> <span class="n">JuMP</span>
+<span class="k">using</span> <span class="n">Clp</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">solver</span> <span class="o">=</span> <span class="n">ClpSolver</span><span class="p">())</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="p">)</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">30</span> <span class="p">)</span>
+
+<span class="p">@</span><span class="n">objective</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Max</span><span class="p">,</span> <span class="mi">5</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">y</span> <span class="p">)</span>
+<span class="p">@</span><span class="n">constraint</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="n">y</span> <span class="o">&lt;=</span> <span class="mf">3.0</span> <span class="p">)</span>
+
+<span class="n">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="n">status</span> <span class="o">=</span> <span class="n">solve</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Objective value: &quot;</span><span class="p">,</span> <span class="n">getobjectivevalue</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="p">,</span> <span class="n">getvalue</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;y = &quot;</span><span class="p">,</span> <span class="n">getvalue</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Max 5 x + 3 y
+Subject to
+ x + 5 y ≤ 3
+ 0 ≤ x ≤ 2
+ 0 ≤ y ≤ 30
+Objective value: 10.6
+x = 2.0
+y = 0.2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># JuMP: Rosenbrock Example</span>
+<span class="c"># Instead of hand-coding first and second derivatives, you only have to give `JuMP` expressions for objective and constraints.</span>
+<span class="c"># Here is an example.</span>
+
+
+<span class="k">using</span> <span class="n">JuMP</span>
+<span class="k">using</span> <span class="n">Ipopt</span>
+
+<span class="k">let</span>
+
+    <span class="n">m</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="n">IpoptSolver</span><span class="p">())</span>
+
+    <span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+    <span class="p">@</span><span class="n">NLobjective</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Min</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">100</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">solve</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="p">,</span> <span class="n">getvalue</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s">&quot; y = &quot;</span><span class="p">,</span> <span class="n">getvalue</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+
+<span class="k">end</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit http://projects.coin-or.org/Ipopt
+******************************************************************************
+
+This is Ipopt version 3.12.4, running with linear solver mumps.
+NOTE: Other linear solvers might be more efficient (see Ipopt documentation).
+
+Number of nonzeros in equality constraint Jacobian...:        0
+Number of nonzeros in inequality constraint Jacobian.:        0
+Number of nonzeros in Lagrangian Hessian.............:        3
+
+Total number of variables............................:        2
+                     variables with only lower bounds:        0
+                variables with lower and upper bounds:        0
+                     variables with only upper bounds:        0
+Total number of equality constraints.................:        0
+Total number of inequality constraints...............:        0
+        inequality constraints with only lower bounds:        0
+   inequality constraints with lower and upper bounds:        0
+        inequality constraints with only upper bounds:        0
+
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+   0  1.0000000e+00 0.00e+00 2.00e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0
+   1  9.5312500e-01 0.00e+00 1.25e+01  -1.0 1.00e+00    -  1.00e+00 2.50e-01f  3
+   2  4.8320569e-01 0.00e+00 1.01e+00  -1.0 9.03e-02    -  1.00e+00 1.00e+00f  1
+   3  4.5708829e-01 0.00e+00 9.53e+00  -1.0 4.29e-01    -  1.00e+00 5.00e-01f  2
+   4  1.8894205e-01 0.00e+00 4.15e-01  -1.0 9.51e-02    -  1.00e+00 1.00e+00f  1
+   5  1.3918726e-01 0.00e+00 6.51e+00  -1.7 3.49e-01    -  1.00e+00 5.00e-01f  2
+   6  5.4940990e-02 0.00e+00 4.51e-01  -1.7 9.29e-02    -  1.00e+00 1.00e+00f  1
+   7  2.9144630e-02 0.00e+00 2.27e+00  -1.7 2.49e-01    -  1.00e+00 5.00e-01f  2
+   8  9.8586451e-03 0.00e+00 1.15e+00  -1.7 1.10e-01    -  1.00e+00 1.00e+00f  1
+   9  2.3237475e-03 0.00e+00 1.00e+00  -1.7 1.00e-01    -  1.00e+00 1.00e+00f  1
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+  10  2.3797236e-04 0.00e+00 2.19e-01  -1.7 5.09e-02    -  1.00e+00 1.00e+00f  1
+  11  4.9267371e-06 0.00e+00 5.95e-02  -1.7 2.53e-02    -  1.00e+00 1.00e+00f  1
+  12  2.8189505e-09 0.00e+00 8.31e-04  -2.5 3.20e-03    -  1.00e+00 1.00e+00f  1
+  13  1.0095040e-15 0.00e+00 8.68e-07  -5.7 9.78e-05    -  1.00e+00 1.00e+00f  1
+  14  1.3288608e-28 0.00e+00 2.02e-13  -8.6 4.65e-08    -  1.00e+00 1.00e+00f  1
+
+Number of Iterations....: 14
+
+                                   (scaled)                 (unscaled)
+Objective...............:   1.3288608467480825e-28    1.3288608467480825e-28
+Dual infeasibility......:   2.0183854587685121e-13    2.0183854587685121e-13
+Constraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
+Complementarity.........:   0.0000000000000000e+00    0.0000000000000000e+00
+Overall NLP error.......:   2.0183854587685121e-13    2.0183854587685121e-13
+
+
+Number of objective function evaluations             = 36
+Number of objective gradient evaluations             = 15
+Number of equality constraint evaluations            = 0
+Number of inequality constraint evaluations          = 0
+Number of equality constraint Jacobian evaluations   = 0
+Number of inequality constraint Jacobian evaluations = 0
+Number of Lagrangian Hessian evaluations             = 14
+Total CPU secs in IPOPT (w/o function evaluations)   =      0.118
+Total CPU secs in NLP function evaluations           =      0.029
+
+EXIT: Optimal Solution Found.
+x = 0.9999999999999899 y = 0.9999999999999792
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># not bad, right?</span>
+<span class="c"># adding the constraint from before:</span>
+
+<span class="k">let</span>
+    
+    <span class="n">m</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="n">IpoptSolver</span><span class="p">())</span>
+
+    <span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+    <span class="p">@</span><span class="n">NLobjective</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Min</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">100</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+    <span class="p">@</span><span class="n">NLconstraint</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span> <span class="o">&lt;=</span> <span class="mf">0.8</span><span class="p">)</span>
+
+    <span class="n">solve</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="p">,</span> <span class="n">getvalue</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s">&quot; y = &quot;</span><span class="p">,</span> <span class="n">getvalue</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+
+<span class="k">end</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This is Ipopt version 3.12.4, running with linear solver mumps.
+NOTE: Other linear solvers might be more efficient (see Ipopt documentation).
+
+Number of nonzeros in equality constraint Jacobian...:        0
+Number of nonzeros in inequality constraint Jacobian.:        2
+Number of nonzeros in Lagrangian Hessian.............:        5
+
+Total number of variables............................:        2
+                     variables with only lower bounds:        0
+                variables with lower and upper bounds:        0
+                     variables with only upper bounds:        0
+Total number of equality constraints.................:        0
+Total number of inequality constraints...............:        1
+        inequality constraints with only lower bounds:        0
+   inequality constraints with lower and upper bounds:        0
+        inequality constraints with only upper bounds:        1
+
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+   0  1.0000000e+00 0.00e+00 2.00e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0
+   1  9.5312500e-01 0.00e+00 1.25e+01  -1.0 5.00e-01    -  1.00e+00 5.00e-01f  2
+   2  4.9204994e-01 0.00e+00 9.72e-01  -1.0 8.71e-02    -  1.00e+00 1.00e+00f  1
+   3  2.0451702e+00 0.00e+00 3.69e+01  -1.7 3.80e-01    -  1.00e+00 1.00e+00H  1
+   4  1.0409466e-01 0.00e+00 3.10e-01  -1.7 1.46e-01    -  1.00e+00 1.00e+00f  1
+   5  8.5804626e-02 0.00e+00 2.71e-01  -1.7 9.98e-02    -  1.00e+00 1.00e+00h  1
+   6  9.4244879e-02 0.00e+00 6.24e-02  -1.7 3.74e-02    -  1.00e+00 1.00e+00h  1
+   7  8.0582034e-02 0.00e+00 1.51e-01  -2.5 6.41e-02    -  1.00e+00 1.00e+00h  1
+   8  7.8681242e-02 0.00e+00 2.12e-03  -2.5 1.12e-02    -  1.00e+00 1.00e+00h  1
+   9  7.6095770e-02 0.00e+00 6.16e-03  -3.8 1.37e-02    -  1.00e+00 1.00e+00h  1
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+  10  7.6033892e-02 0.00e+00 2.23e-06  -3.8 3.99e-04    -  1.00e+00 1.00e+00h  1
+  11  7.5885642e-02 0.00e+00 2.07e-05  -5.7 7.99e-04    -  1.00e+00 1.00e+00h  1
+  12  7.5885428e-02 0.00e+00 2.74e-11  -5.7 1.38e-06    -  1.00e+00 1.00e+00h  1
+  13  7.5883585e-02 0.00e+00 3.19e-09  -8.6 9.93e-06    -  1.00e+00 1.00e+00f  1
+
+Number of Iterations....: 13
+
+                                   (scaled)                 (unscaled)
+Objective...............:   7.5883585442440671e-02    7.5883585442440671e-02
+Dual infeasibility......:   3.1949178858070582e-09    3.1949178858070582e-09
+Constraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
+Complementarity.........:   2.5454985882932001e-09    2.5454985882932001e-09
+Overall NLP error.......:   3.1949178858070582e-09    3.1949178858070582e-09
+
+
+Number of objective function evaluations             = 20
+Number of objective gradient evaluations             = 14
+Number of equality constraint evaluations            = 0
+Number of inequality constraint evaluations          = 20
+Number of equality constraint Jacobian evaluations   = 0
+Number of inequality constraint Jacobian evaluations = 14
+Number of Lagrangian Hessian evaluations             = 13
+Total CPU secs in IPOPT (w/o function evaluations)   =      0.004
+Total CPU secs in NLP function evaluations           =      0.002
+
+EXIT: Optimal Solution Found.
+x = 0.7247018392092258 y = 0.5242206029480763
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="JuMP:-Maximium-Likelihood">JuMP: Maximium Likelihood<a class="anchor-link" href="#JuMP:-Maximium-Likelihood">&#182;</a></h2><ul>
+<li>Let's redo the maximum likelihood example in JuMP.</li>
+<li>Let $\mu,\sigma^2$ be the unknown mean and variance of a random sample generated from the normal distribution.</li>
+<li>Find the maximum likelihood estimator for those parameters!</li>
+<li>density:</li>
+</ul>
+$$ f(x_i|\mu,\sigma^2) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left(-\frac{(x_i - \mu)^2}{2\sigma^2}\right) 
+$$<ul>
+<li>Likelihood Function</li>
+</ul>
+$$ \begin{aligned} 
+L(\mu,\sigma^2) = \Pi_{i=1}^N f(x_i|\mu,\sigma^2) =& \frac{1}{(\sigma \sqrt{2\pi})^n} \exp\left(-\frac{1}{2\sigma^2} \sum_{i=1}^N (x_i-\mu)^2 \right) \\
+     =& \left(\sigma^2 2\pi\right)^{-\frac{n}{2}} \exp\left(-\frac{1}{2\sigma^2} \sum_{i=1}^N (x_i-\mu)^2 \right) 
+\end{aligned} 
+$$<ul>
+<li>Constraints: $\mu\in \mathbb{R},\sigma>0$</li>
+<li>log-likelihood: </li>
+</ul>
+$$ \log L = l = -\frac{n}{2} \log \left( 2\pi \sigma^2 \right) - \frac{1}{2\sigma^2} \sum_{i=1}^N (x_i-\mu)^2 $$<ul>
+<li>Let's do this in <code>JuMP</code>.</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c">#  Copyright 2015, Iain Dunning, Joey Huchette, Miles Lubin, and contributors</span>
+<span class="c">#  example modified </span>
+<span class="k">using</span> <span class="n">JuMP</span>
+<span class="k">using</span> <span class="n">Distributions</span>
+
+<span class="n">distrib</span> <span class="o">=</span> <span class="n">Normal</span><span class="p">(</span><span class="mf">4.5</span><span class="p">,</span><span class="mf">3.5</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="n">distrib</span><span class="p">,</span><span class="n">n</span><span class="p">);</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="n">IpoptSolver</span><span class="p">())</span>
+
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">start</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="p">@</span><span class="n">variable</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">&gt;=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">start</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span>
+
+<span class="p">@</span><span class="n">NLobjective</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Max</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="n">π</span><span class="o">*</span><span class="n">sigma</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="n">sum</span><span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span> <span class="o">^</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">sigma</span><span class="o">^</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">solve</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;μ = &quot;</span><span class="p">,</span> <span class="n">getvalue</span><span class="p">(</span><span class="n">mu</span><span class="p">),</span><span class="s">&quot;, mean(data) = &quot;</span><span class="p">,</span> <span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;σ^2 = &quot;</span><span class="p">,</span> <span class="n">getvalue</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="s">&quot;, var(data) = &quot;</span><span class="p">,</span> <span class="n">var</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This is Ipopt version 3.12.4, running with linear solver mumps.
+NOTE: Other linear solvers might be more efficient (see Ipopt documentation).
+
+Number of nonzeros in equality constraint Jacobian...:        0
+Number of nonzeros in inequality constraint Jacobian.:        0
+Number of nonzeros in Lagrangian Hessian.............:        3
+
+Total number of variables............................:        2
+                     variables with only lower bounds:        1
+                variables with lower and upper bounds:        0
+                     variables with only upper bounds:        0
+Total number of equality constraints.................:        0
+Total number of inequality constraints...............:        0
+        inequality constraints with only lower bounds:        0
+   inequality constraints with lower and upper bounds:        0
+        inequality constraints with only upper bounds:        0
+
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+   0  1.7211927e+05 0.00e+00 1.01e+02  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0
+   1  1.2147584e+05 0.00e+00 9.58e+01  -1.0 9.27e+00    -  1.00e+00 5.00e-01f  2
+   2  7.4758242e+04 0.00e+00 3.97e+01  -1.0 2.37e-01    -  8.94e-01 1.00e+00f  1
+   3  4.9624139e+04 0.00e+00 1.64e+01  -1.0 3.08e-01    -  1.00e+00 1.00e+00f  1
+   4  3.6644573e+04 0.00e+00 6.64e+00  -1.0 3.88e-01    -  1.00e+00 1.00e+00f  1
+   5  3.0384758e+04 0.00e+00 2.60e+00  -1.0 4.69e-01    -  1.00e+00 1.00e+00f  1
+   6  2.7756981e+04 0.00e+00 9.40e-01  -1.0 5.20e-01    -  1.00e+00 1.00e+00f  1
+   7  2.6938155e+04 0.00e+00 2.73e-01  -1.7 4.72e-01    -  1.00e+00 1.00e+00f  1
+   8  2.6791555e+04 0.00e+00 5.45e-02  -1.7 3.06e-01    -  1.00e+00 1.00e+00f  1
+   9  2.6784961e+04 0.00e+00 2.83e-03  -2.5 8.44e-02    -  1.00e+00 1.00e+00f  1
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+  10  2.6784947e+04 0.00e+00 6.72e-06  -3.8 4.30e-03    -  1.00e+00 1.00e+00f  1
+  11  2.6784947e+04 0.00e+00 1.69e-09  -5.7 6.80e-05    -  1.00e+00 1.00e+00f  1
+  12  2.6784947e+04 0.00e+00 4.02e-13  -8.6 1.02e-06    -  1.00e+00 1.00e+00f  1
+
+Number of Iterations....: 12
+
+                                   (scaled)                 (unscaled)
+Objective...............:   8.4800120957055221e+00    2.6784947040164145e+04
+Dual infeasibility......:   4.0182611534353866e-13    1.2692070597731996e-09
+Constraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
+Complementarity.........:   2.5064395506978949e-09    7.9168343001320250e-06
+Overall NLP error.......:   2.5064395506978949e-09    7.9168343001320250e-06
+
+
+Number of objective function evaluations             = 18
+Number of objective gradient evaluations             = 13
+Number of equality constraint evaluations            = 0
+Number of inequality constraint evaluations          = 0
+Number of equality constraint Jacobian evaluations   = 0
+Number of inequality constraint Jacobian evaluations = 0
+Number of Lagrangian Hessian evaluations             = 12
+Total CPU secs in IPOPT (w/o function evaluations)   =      0.006
+Total CPU secs in NLP function evaluations           =      0.023
+
+EXIT: Optimal Solution Found.
+μ = 4.490925092754868, mean(data) = 4.490925092754868
+σ^2 = 12.417569220495565, var(data) = 12.418811091779508
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section>
 </div>
 </div>
